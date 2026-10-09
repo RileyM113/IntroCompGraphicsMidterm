@@ -35,12 +35,18 @@ public class Movement : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        
+        if (collision.gameObject.tag == "Wall")
+        {
+            Debug.Log(collision.gameObject.name);
+        }
     }
 
     private void OnCollisionExit(Collision collision)
     {
-       
+        if (collision.gameObject.tag == "Wall")
+        {
+            Debug.Log(collision.gameObject.name);
+        }
     }
 }
 
